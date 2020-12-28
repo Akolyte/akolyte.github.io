@@ -3,9 +3,9 @@
 	<li
 		{%- if p.link == '/' -%}
 			{% if page.url == p.link %} class="current" {%- endif -%}
-		{%- else -%}
+		{% else -%}
 			{%- if page.url contains p.link -%} class = "current" {%- endif -%}
-		{%- endif -%}
+		{% endif -%}
 	><a href="{{ p.link | relative_url }}">{{ p.title }}</a></li>
 	{% endfor -%}
 </ul>
