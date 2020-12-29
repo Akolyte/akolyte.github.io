@@ -2,3 +2,4 @@ theme: jekyll-theme-cayman
 title: Hojin Ryoo - Data Scientist
 description: My portfolio, profile, and contact information all in one place!
 permalink: /:title/ 
+encoding: UTF-8
