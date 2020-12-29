@@ -1,7 +1,7 @@
 ---
 layout: post
 title: First Post
-categories: weekly
+tags: weekly
 excerpt_separator: <!--more-->
 ---
 
