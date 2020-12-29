@@ -8,9 +8,11 @@ title: Projects
 <body>
 	<h1>Blog</h1>
 	{% for tag in site.tags %}
-		{% for post in weekly[1] %}
-			<h2>{{ post.title }}</h2>
-			<p>{{ post.excerpt }}</p>
-		{% endfor %}
+		{% if tag == weekly %}
+			{% for post in tag[1] %}
+				<h2>{{ post.title }}</h2>
+				<p>{{ post.excerpt }}</p>
+			{% endfor %}
+		{% endif %}
 	{% endfor %}
 </body>
