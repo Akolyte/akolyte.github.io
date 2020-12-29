@@ -5,4 +5,10 @@ title: Projects
 
 {% include header.html -%}
 
-projects 
+<body>
+	<h1>Projects</h1>
+	{% for post in project[1] %}
+		<h2>{{ post.title }}</h2>
+		<p>{{ post.excerpt }}</p>
+	{% endfor %}
+</body>

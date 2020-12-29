@@ -5,11 +5,10 @@ title: Projects
 
 {% include header.html -%}
 
-<h1>Blog</h1>
-
 <body>
-	{% for post in site.posts %}
-	<h2>{{ post.title }}</h2>
-	<p>{{ post.excerpt }}</p>
+	<h1>Blog</h1>
+	{% for post in weekly[1] %}
+		<h2>{{ post.title }}</h2>
+		<p>{{ post.excerpt }}</p>
 	{% endfor %}
 </body>
