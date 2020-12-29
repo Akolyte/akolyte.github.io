@@ -8,7 +8,7 @@ title: Projects
 <body>
 	<h1>Projects</h1>
 	{% for tag in site.tags %}
-		{% if tag == project %}
+		{% if tag[0] == "project" %}
 			{% for post in project[1] %}
 				<h2>{{ post.title }}</h2>
 				<p>{{ post.excerpt }}</p>
