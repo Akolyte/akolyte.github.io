@@ -8,10 +8,8 @@ title: Projects
 <h1>Blog</h1>
 
 <body>
-	<ul>
-		{% for post in site.posts %}
-		<h2>{{ post.title }}</h2>
-		<p>{{ post.excerpt }}</p>
-		{% endfor %}
-	</ul>
+	{% for post in site.posts %}
+	<h2>{{ post.title }}</h2>
+	<p>{{ post.excerpt }}</p>
+	{% endfor %}
 </body>
