@@ -5,7 +5,8 @@ tag: project
 excerpt_separator: <!--more-->
 ---
 
-### Date: December 31st, 2020
+Hojin Ryoo & Debanshu Das
+Date: December 31st, 2020
 
 ### Introduction
 
