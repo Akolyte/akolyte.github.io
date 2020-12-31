@@ -19,6 +19,6 @@ Our group used a multitude of datasets. We did not use the same data that we use
 We used the drop_duplicates() function on both datasets once they were converted into dataframes, and after comparing the shape of both the original and the dropped duplicate dataframes, the number of records was the same, so we concluded that there were no 
 duplicates.
 
-![Duplicate 1](/imgs/dup1.jpg) ![Duplicate 2](/imgs/dup2.jpg)
+![Duplicate 1](/imgs/dup1.JPG) ![Duplicate 2](/imgs/dup2.JPG)
 
 <!--more-->
