@@ -23,6 +23,6 @@ duplicates.
 
 To determine where the missing values were we used the count function to count the cells in each column that had non-missing values and compared that to the total number of records.
 
-![Total Records](/imgs/schema_matcher/total_records.JPG) ![NA 1](/imgs/schema_matcher/na1.JPG) ![NA 2](/imgs/schema_matcher/na2.JPG)
+![NA 1](/imgs/schema_matcher/na1.JPG) ![NA 2](/imgs/schema_matcher/na2.JPG) ![Total Records](/imgs/schema_matcher/total_records.JPG)
 
 <!--more-->
