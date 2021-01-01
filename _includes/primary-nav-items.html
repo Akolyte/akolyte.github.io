@@ -9,7 +9,9 @@ ul {
 
 li {
   float: left;
-  right: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 li a {
@@ -39,5 +41,5 @@ li a:hover {
 		{% endif -%}
 	><a href="{{ p.link | relative_url }}">{{ p.title }}</a></li>
 	{% endfor -%}
-	<li>CHANGED</li>
+	<li>CHANGE1</li>
 </ul>
