@@ -7,10 +7,11 @@ title: Projects
 
 <body>
 	<h1>Projects</h1>
+	<p>Here is where I post my projects upon their completion. </p>
 	{% for tag in site.tags %}
 		{% if tag[0] == "project" %}
 			{% for post in tag[1] %}
-				<h2>{{ post.title }}</h2>
+				<a href = "{{ post.url }}"><h2>{{ post.title }}</h2></a>
 				<p>{{ post.excerpt }}</p>
 			{% endfor %}
 		{% endif %}
