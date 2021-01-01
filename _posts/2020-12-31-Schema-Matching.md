@@ -20,7 +20,7 @@ Our group used a multitude of datasets. We did not use the same data that we use
 We used the drop_duplicates() function on both datasets once they were converted into dataframes, and after comparing the shape of both the original and the dropped duplicate dataframes, the number of records was the same, so we concluded that there were no 
 duplicates.
 
-![Duplicate 1](/imgs/dup1.JPG) ![Duplicate 2](/imgs/dup2.JPG)
+![Duplicate 1](/imgs/schema_matcher/dup1.JPG) ![Duplicate 2](/imgs/schema_matcher/dup2.JPG)
 
 To determine where the missing values were we used the count function to count the cells in each column that had non-missing values and compared that to the total number of records.
 
