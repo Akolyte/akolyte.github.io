@@ -17,6 +17,8 @@ Date: December 31st, 2020
 
 In this phase of the semester project our objective was to practice using data science techniques to extract and clean data, and then to integrate data using implementations of some of the techniques we learned in class. In part A of phase 2 we cleaned the data, identified missing values, and formally assessed the similarity of the data using instance-based matching. In part B we used FlexMatcher to match columns of different coronavirus datasets together. 
 
+Link to code [here](https://colab.research.google.com/drive/1pVdyLwwS0c9t_tYFYLqR7zmgtD-FK0zn?usp=sharing).
+
 <!--more-->
 
 ### Data Description
@@ -32,4 +34,81 @@ To determine where the missing values were we used the count function to count t
 
 ![NA 1](/imgs/schema_matcher/na1.JPG) ![NA 2](/imgs/schema_matcher/na2.JPG) ![Total Records](/imgs/schema_matcher/total_records.JPG)
 
-<!--more-->
+As you can see from the number of records compared to the count of non-missing values, the dataworld dataframe, the url, phone_number, fax, email, website, facebook, twitter, instagram, pinterest, and youtube values all have missing values. Some of these attributes had all missing values, so we decided to remove them. We did not remove the column website because we thought it would be interesting to have later on for the jaccard similarity matching. We removed 12 attributes in total. 
+
+In the kaggle dataframe on the other hand the only attribute that had missing values was websites. 
+
+We replaced the missing values with an arbitrary value ‘X’, as we thought a random variable would be appropriate as a replacement for missing values. 
+
+The attributes for the datasets are as follows. 
+
+**Data.world - 11 attributes, 25,533 records**
+
+**Link:** https://data.world/data-hut/subway-restaurant-location-dataset
+
+**address** - the address of the restaurant
+
+**city** - the city the restaurant is located in
+
+**country** - the country the restaurant is located in
+
+**keys** - the API key used to access the information in the entity
+
+**latitude** - the latitude location of the restaurant
+
+**longitude** - the longitude location of the restaurant
+
+**name** - the name of the restaurant
+
+**postalCode** - the zipcode of the restaurant
+
+**province** - the state the restaurant is located in
+
+**websites** - the website url of the website related to the restaurant
+
+
+**Kaggle - 10 attributes, 10,000 records**
+
+**Link:** https://www.kaggle.com/datafiniti/fast-food-restaurants?select=FastFoodRestaurants.csv
+
+**name:** represent name of the restaurant, 
+
+**url** - used to find the information for the other attributes such as city, state, etc.
+
+**street_address** - is the street address of the restaurant, 
+
+**city** - is the city the restaurant is located, 
+
+**state** -  the state the restaurant is located in, 
+
+**zip_code** - the zip code of the restaurant, 
+
+**country** - the country in which the restaurant is located in, 
+
+**phone_number*** - is the phone number of the restaurant,
+
+**fax*** - is the fax of the restaurant, email is the email of the restaurant, 
+
+**website** - is the website of the restaurant, 
+
+**open_hours** - is the hours the restaurant is open, 
+
+**latitude:** is the latitude number the restaurant is located at, 
+
+**longitude** - is the longitude number the restaurant is located at, 
+
+**facebook*** - is the link for the facebook page of the restaurant, 
+
+**twitter*** - is the link for the twitter page of the restaurant, 
+
+**instagram*** - is the link for the instagram page of the restaurant, 
+
+**pinterest*** - is the link for the pinterest page of the restaurant, 
+
+**youtube*** - is the link for the youtube page of the restaurant.
+
+* = Dropped Attributes
+
+For part B we used the John Hopkins repository discussed in the assignment prompt. From the US daily covid cases reports datasets we chose the July 11th and December 2nd cases. We chose days that would have had spikes from major holidays for fun. We then used the time series data from the same prompt and ran flexmatcher on the daily covid cases datasets to train the schema matcher and then did a prediction for the times series data. Since this an instanced based match we do not need the attributes from the time series data for testing, so we dropped them.
+
+The time series data had 3339 records, and 330 attributes. The July 11th data had 58 records and 18 attributes. The Dec 2nd data had the same number of records and attributes compared to the July 11th dataset. There were also no duplicates after dropping the duplicates using the drop_duplicates function. We show this using the number of records before the drop and after the drop. Looking below you can see that they are the same. 
