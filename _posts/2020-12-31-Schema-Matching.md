@@ -42,9 +42,7 @@ We replaced the missing values with an arbitrary value ‘X’, as we thought a 
 
 The attributes for the datasets are as follows. 
 
-**Data.world - 11 attributes, 25,533 records**
-
-**Link:** https://data.world/data-hut/subway-restaurant-location-dataset
+**[Data.world Restaurant Locations](https://data.world/data-hut/subway-restaurant-location-dataset) - 11 attributes, 25,533 records**
 
 **address** - the address of the restaurant
 
@@ -67,9 +65,7 @@ The attributes for the datasets are as follows.
 **websites** - the website url of the website related to the restaurant
 
 
-**Kaggle - 10 attributes, 10,000 records**
-
-**Link:** https://www.kaggle.com/datafiniti/fast-food-restaurants?select=FastFoodRestaurants.csv
+**[Kaggle Fast Food](https://www.kaggle.com/datafiniti/fast-food-restaurants?select=FastFoodRestaurants.csv) - 10 attributes, 10,000 records**
 
 **name:** represent name of the restaurant, 
 
@@ -112,3 +108,19 @@ The attributes for the datasets are as follows.
 For part B we used the John Hopkins repository discussed in the assignment prompt. From the US daily covid cases reports datasets we chose the July 11th and December 2nd cases. We chose days that would have had spikes from major holidays for fun. We then used the time series data from the same prompt and ran flexmatcher on the daily covid cases datasets to train the schema matcher and then did a prediction for the times series data. Since this an instanced based match we do not need the attributes from the time series data for testing, so we dropped them.
 
 The time series data had 3339 records, and 330 attributes. The July 11th data had 58 records and 18 attributes. The Dec 2nd data had the same number of records and attributes compared to the July 11th dataset. There were also no duplicates after dropping the duplicates using the drop_duplicates function. We show this using the number of records before the drop and after the drop. Looking below you can see that they are the same. 
+
+![Shape 1](/imgs/schema_matcher/shape1.JPG) ![Shape 2](/imgs/schema_matcher/shape2.JPG)
+
+Links for the different data are below. 
+
+[US Daily Covid Cases July 11th](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/07-11-2020.csv)
+
+[US Daily Covid Cases Dec 2nd](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports_us/12-02-2020.csv)
+
+[US Time Series Covid Cases](https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv)
+
+### Part A: Jaccard Similarity Measure
+
+**Methods:**
+
+Comparing the column names some are the same such as name, city, latitude, and longitude, totaling to 4. That leaves 7 attributes that are different for dataworld and 6 for kaggle. Some of the names are completely different from their counterparts such as state in the kaggle dataframe compared to province from the kaggle dataframe. Therefore we decided to use instance-based matching for the jaccard. 
