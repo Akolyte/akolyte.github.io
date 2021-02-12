@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 12/29/2020: First Post
+title: 12/29/2020 - First Post
 tag: weekly
 excerpt_separator: <!--more-->
 ---
