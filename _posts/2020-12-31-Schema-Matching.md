@@ -17,7 +17,7 @@ Date: December 31st, 2020
 
 In this phase of the semester project our objective was to practice using data science techniques to extract and clean data, and then to integrate data using implementations of some of the techniques we learned in class. In part A of phase 2 we cleaned the data, identified missing values, and formally assessed the similarity of the data using instance-based matching. In part B we used FlexMatcher to match columns of different coronavirus datasets together. 
 
-Link to code [here](https://colab.research.google.com/drive/1pVdyLwwS0c9t_tYFYLqR7zmgtD-FK0zn?usp=sharing).
+Link to code [here](https://colab.research.google.com/drive/1pVdyLwwS0c9t_tYFYLqR7zmgtD-FK0zn?usp=sharing){:target="_blank"}.
 
 <!--more-->
 
