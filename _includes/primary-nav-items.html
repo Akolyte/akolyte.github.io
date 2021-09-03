@@ -41,6 +41,6 @@ li a:hover {
 		{% else -%}
 			{% if page.url contains p.link %} class="current" {%- endif -%}
 		{% endif -%}
-	><a href="{{ p.link | relative_url }}">{{ p.title start}}</a></li>
+	><a href="{{ p.link | relative_url }}">{{ p.title }}</a></li>
 	{% endfor -%}
 </ul>
