@@ -129,7 +129,7 @@ Comparing the column names some are the same such as name, city, latitude, and l
 
 Moving along we compared the performance between using the total word, 2-grams, and 3-grams. In order to get grams we had to create a function that could make the tokens which is shown below. The function is changed depending on whether we wish to create 2-gram or 3-gram tokens. The 3-token code is commented out. 
 
-```
+```python
 # 2-gram
 def getGrams(array):
   grams = []
@@ -152,7 +152,7 @@ def getGrams(array):
 
 An example of the jaccard script for 2-gram tokens with comments explaining the steps are below. The script is the same for 3-gram besides the commented lines being changed with its associated counterpart for the 2-gram. For word tokens the lines with the gram token function are removed. 
 
-```
+```python
 # Jaccard Similarity Measure - 2gram
 # Take the set of all the tokens 
 col_vals = set(getGrams(kaggle_clean['address'].unique()))
@@ -213,7 +213,7 @@ When we trained the schema matcher we ran into a problem where flexmatcher doesn
 
 After this we ran the schema matcher model on the time series dataset and returned these results. 
 
-```
+```python
 predicted_mapping = fm.make_prediction(covid_cases.astype(str))
 predicted_mapping
 ```
