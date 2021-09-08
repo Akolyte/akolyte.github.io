@@ -1,15 +1,10 @@
 ---
-layout: post
+layout: default
 title: Schema Matching with FlexMatcher
+description: By Hojin Ryoo & Debanshu Das
 tag: project
 excerpt_separator: <!--more-->
 ---
-
-Hojin Ryoo & Debanshu Das
-
-DS 320
-
-Marc Rigas
 
 Date: December 31st, 2020
 
