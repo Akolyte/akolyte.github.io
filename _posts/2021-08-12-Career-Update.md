@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 8/12/2021 - Career Update
 tag: weekly
 excerpt_separator: <!--more-->

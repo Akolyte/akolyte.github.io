@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Blog
+description: Career Progress
 ---
 
 <body>
-	<h1>Blog</h1>
 	{% for tag in site.tags %}
 		{% if tag[0] == "weekly" %}
 			{% for post in tag[1] %}

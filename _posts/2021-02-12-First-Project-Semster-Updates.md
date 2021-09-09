@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 2/12/2021 - Semester Updates
 tag: weekly
 excerpt_separator: <!--more-->

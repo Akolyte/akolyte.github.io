@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 1/14/2021 - End of Break
 tag: weekly
 excerpt_separator: <!--more-->
