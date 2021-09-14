@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Schema Matching with FlexMatcher
-description: By Hojin Ryoo & Debanshu Das
+description: By Hojin Ryoo and Debanshu Das
 tag: project
 excerpt_separator: <!--more-->
 ---
