@@ -6,11 +6,11 @@ tag: project
 excerpt_separator: <!--more-->
 ---
 
-**Date: May 5th, 2021**
+### Date: May 5th, 2021
 
-**Class: SODA 308**
+### Class: SODA 308
 
-**Instructor: Burt Monroe**
+### Instructor: Burt Monroe
 
 ## Introduction
 
