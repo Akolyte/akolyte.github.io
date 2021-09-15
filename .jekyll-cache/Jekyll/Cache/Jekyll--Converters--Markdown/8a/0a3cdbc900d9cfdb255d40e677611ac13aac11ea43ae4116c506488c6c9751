@@ -1,0 +1,119 @@
+I"�:<p>Date: May 5th, 2021
+Class: SODA 308
+Instructor: Burt Monroe</p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>The Academy Awards, or the Oscars, is the most influential award show in the movie industry where best films of the year are awarded since 1929 (Zauzmer, 2020). Every year, cinephiles and general movie fans all over the world tune in to witness the awards being given out. Predicting the Oscars has also become very popular among movie fans. On the largest prediction site, Gold Derby, there are more than 10,000 users trying to predict the final winners every year.
+This year, due to the COVID-19 pandemic, the film industry is facing unprecedented challenges.</p>
+
+<p>Firstly, there are less blockbuster movies coming out this year due to boxoffice concerns. Looking at this year’s Best Picture nominees, the only “normal” Oscar movies are Mank and The Trial of the Chicago 7. The other six nominees are low-budget independent movies, which are mostly likely not gonna be nominated in a normal year.</p>
+
+<p>Second, the awards season had been prolonged, with the Oscars awards ceremony being postponed to be held on April 25th.</p>
+
+<p>Most importantly, because of the pandemic, all awards season screening had been held online instead of in-person. Many Oscar voters have complained openly because they cannot enjoy the screening in theaters and they cannot converse with other members and get to know their opinions. All these changes have made this year’s Oscar race more unpredictable than ever.</p>
+
+<p>To predict the winners, there are a variety of factors to take into consideration, which we will briefly introduce in the background section. Considering that social media can influence public and private opinions about these nominated movies, in this project, we investigated whether we can use twitter sentiment scores to predict the winners. Since the most talked-about Oscar categories on twitter are Best Picture, Best Actor, Best Actress, Best Supporting Actor and Best Supporting Actress, we will limit our prediction scope to these five main categories.</p>
+
+<!--more-->
+
+<h3 id="background">Background</h3>
+
+<p>There have been some attempts to apply quantitative methods for Oscar prediction in the past few years with varying degrees of success (Ables, 2019; Stutzenstein, 2021; Zauzmer, B., 2020). Zauzmer (2019) even published a book about using data science to predict oscar winners.</p>
+
+<p>There have been some attempts to apply quantitative methods for Oscar prediction in the past few years with varying degrees of success (Ables, 2019; Stutzenstein, 2021; Zauzmer, B., 2020). Ables (2019) studied the determinants of Oscar success using a multilinear regression model using variables such as genre, content, precursor results, MPAA ratings, etc. and obtained a 66% accuracy using the model to predict Best Picture winners in the past 40 years. The success rate is acceptable with room for improvement.</p>
+
+<p>Ben Zauzmer has been using different prediction models to predict Oscar results for years and has written a book detailing the methods he attempted (Zauzmer 2019). He recently announced his prediction of this year’s Oscar nominations in the Best Picture category and obtained an accuracy of 5/8 (Zauzmer 2021). In addition, Zauzmer studied various variables affecting the final results such as release date. He concluded that later release dates can increase nomination probabilities and add revenue for Oscar nominees (Zauzmer 2020).</p>
+
+<p>However, the movie industry faced unmatched challenges due to the COVID-19 pandemic in the past year. The Oscars have been postponed and even the eligibility rules have been modified to allow on-demand streaming movies to compete. The unprecedented circumstances make prediction purely based on historical data less useful for this year.</p>
+
+<p>Alternatively, other researchers have been using social media data to predict Oscar outcomes. Malyack et al. (2020) analyzed the correlation of twitter activities and Oscar winners from 2015 to 2019 through retweets, mentions, hashtags, and favorites. They applied logistic regression and time series decomposition to determine whether which factor was related to Oscar winner forecasting. Interestingly, their only significant finding was that best picture winners had significantly fewer total retweets than non-winning nominees. Stutzenstein (2021) compared prediction results using box office data and Twitter data, and concluded that “Twitter data are not significant and do not add value for the prediction of Academy Award winners”.</p>
+
+<p>However, this year, the box office data has minimal impact as most theaters are still closed in the US. And given the influence that social media can play in swaying public and private opinion on movies, we believe that we can use Twitter post sentiment on related hashtags to movies and predict Oscar winners based on sentiment score amongst other features.</p>
+
+<h3 id="research-question">Research Question</h3>
+
+<p>The research question is:</p>
+
+<p><strong>“Can sentiment scores of Twitter posts be used to predict the Oscars results?”</strong></p>
+
+<p>As sentiment is not the only possible indicator of performance at the Oscars, movie ratings were also used as a predictor for the final model. Our hypothesis is that sentiment scores will be a significant feature in predicting Oscar results.</p>
+
+<h3 id="data">Data</h3>
+
+<p>The data was collected from the Twitter API using Tweepy, a python package used to access the Twitter API. The search parameters that were used to search for the tweets were “#oscars” and “#person/movie name”. As Twitter posts related to the Oscars start to increase in frequency as time moves closer to the Oscars, we gathered 100 posts from each day of the week (April 16th - April 23rd) prior to the Oscars, for a total of 800 tweets per person/movie. All the posts were added to a pandas dataframe for easy accessibility. Each row contains the name of the person/actor, the text of the tweet, the favorite and retweet counts of the post, and the date the post was posted.</p>
+
+<p>Data was also collected from IMDB and Rotten tomatoes to obtain community and critic ratings for movies. This was done in order to calculate the total probability of a picture/person winning the Oscars. From IMDB the community rating was collected for the movie itself or the movie that the person performed in. From Rotten Tomatoes the critic score and audience score for the movie itself or the movie that the person performed in were collected.</p>
+
+<h3 id="methods">Methods</h3>
+
+<p>After the tweets were collected, they needed to be cleaned for sentiment analysis. The entire string of the text is set to lowercase, and any @ signs, links, numbers, and plus signs are replaced with a space. Stopwords including additional words related to retweets such as rt, rts, and retweet are removed from the text. Stopwords are words in the english language that are most commonly used such as you, it, be, etc. The words in the post were also stemmed using NLTK’s PorterStemmer. Stemming is taking words to their root form, so that different variations of a word are not counted as different words, and are instead counted as the same word.</p>
+
+<p>After this process the Natural Language Toolkit (NLTK) package from python was used to calculate sentiment scores. Specifically the SentimentIntensityAnalyzer from the NLTK Vader package This sentiment scores returned are the negative, neutral, positive, and compound sentiment scores for the text. As in this project we are only concerned with the overall sentiment, we used the compound sentiment score metric for each post. The dataframes were then split based on the name of the person/picture, and then the average sentiment compound score was calculated from the new dataframes. This is the value that was used as the sentiment score value for the probability calculation of a person/picture winning the Oscars.</p>
+
+<p>In order to calculate the probability of a person winning the Oscars, we needed to scale the entire score to 1. As we have 4 features, sentiment score, IMDB score, Rotten Tomatoes audience score, and Rotten tomatoes critic score, for this project each score was scaled to between 0 and 0.25. Once all the features were scaled, they were added up together to calculate the probability of a person/picture winning the Oscars.</p>
+
+<p><img src="/imgs/oscar_prediction/design_diagram.png" alt="design diagram" /></p>
+
+<p>This entire methodology was performed on the five categories that we were predicting (Best Actor, Actress, Supporting Actor, Supporting Actress, Picture). The results were then compiled into a CSV in tidy data format to visualize in ggplot in R. This included the name, category, imdb score, rotten tomato audience score, rotten tomato critic score, sentiment score, and probability of oscar win.</p>
+
+<p><img src="/imgs/oscar_prediction/pandas.jpg" alt="pandas" /></p>
+
+<h3 id="results">Results</h3>
+
+<p>After all the pre-processing steps，and using all the methods we talked about above, we finally can get all the results we want. For each category, we get the results of sentiment score and the oscar winning probability.</p>
+
+<p><img src="/imgs/oscar_prediction/compiled_data.png" alt="compiled data" /></p>
+
+<p>We put all the results in the excel and then import the excel to R to make it visualize as bar plots.</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ggplot</span><span class="p">(</span><span class="n">actor.data</span><span class="p">,</span><span class="w"> </span><span class="n">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="n">oscar_win</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+	</span><span class="n">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="o">=</span><span class="s2">"identity"</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"purple"</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pink"</span><span class="p">,</span><span class="w"> </span><span class="n">show.values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+	</span><span class="n">geom_text</span><span class="p">(</span><span class="n">aes</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="n">oscar_win</span><span class="p">),</span><span class="w"> </span><span class="n">vjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">-0.3</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.5</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+	</span><span class="n">geom_smooth</span><span class="p">(</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"pink"</span><span class="p">,</span><span class="w"> </span><span class="n">se</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">FALSE</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"lm"</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+	</span><span class="n">coord_cartesian</span><span class="p">(</span><span class="n">ylim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="m">0.6</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> 
+	</span><span class="n">labs</span><span class="p">(</span><span class="w"> </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Best Actor Winning Probability."</span><span class="p">,</span><span class="w"> 
+		</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Name"</span><span class="p">,</span><span class="w">
+		</span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Probability of Oscar Win"</span><span class="p">,</span><span class="w">
+		</span><span class="n">caption</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Source: Tweets Data"</span><span class="w">
+		</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<p>To get the bar plot from which we can visually determine which one is predicted to win.</p>
+
+<p><strong>For the sentiment score predictions:</strong></p>
+
+<p><img src="/imgs/oscar_prediction/best_actor_sentiment_ex.png" alt="best actor sentiment" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_actress_sentiment.png" alt="best actress sentiment" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_supporting_actor_sentiment.png" alt="best sup actor sentiment" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_supporting_actress_sentiment.png" alt="best sup actress sentiment" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_movie_sentiment.png" alt="best movie sentiment" /></p>
+
+<p>For the sentiment score winner, we got the prediction right for best actor, best actress and best supporting actress, and got the prediction wrong for best supporting actor and the best movie, which is ⅗ for the total prediction accuracy.</p>
+
+<p><strong>For the Oscar Winner probability predictions:</strong></p>
+
+<p><img src="/imgs/oscar_prediction/best_actor.png" alt="best actor" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_actress.png" alt="best actress" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_supporting_actor.png" alt="best sup actor" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_supporting_actress.png" alt="best sup actress" /></p>
+
+<p><img src="/imgs/oscar_prediction/best_movie.png" alt="best movie" /></p>
+
+<h3 id="discussion">Discussion</h3>
+
+<h3 id="limitations">Limitations</h3>
+
+<h3 id="future-work">Future Work</h3>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<h3 id="references">References</h3>
+:ET
