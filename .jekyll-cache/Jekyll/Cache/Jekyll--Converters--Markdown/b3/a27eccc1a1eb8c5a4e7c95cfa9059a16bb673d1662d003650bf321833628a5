@@ -1,8 +1,8 @@
-I"t<p><strong>Date: May 5th, 2021</strong></p>
+I"–<h3 id="date-may-5th-2021">Date: May 5th, 2021</h3>
 
-<p><strong>Class: SODA 308</strong></p>
+<h3 id="class-soda-308">Class: SODA 308</h3>
 
-<p><strong>Instructor: Burt Monroe</strong></p>
+<h3 id="instructor-burt-monroe">Instructor: Burt Monroe</h3>
 
 <h2 id="introduction">Introduction</h2>
 
@@ -16,5 +16,7 @@ This year, due to the COVID-19 pandemic, the film industry is facing unprecedent
 <p>Most importantly, because of the pandemic, all awards season screening had been held online instead of in-person. Many Oscar voters have complained openly because they cannot enjoy the screening in theaters and they cannot converse with other members and get to know their opinions. All these changes have made this yearâ€™s Oscar race more unpredictable than ever.</p>
 
 <p>To predict the winners, there are a variety of factors to take into consideration, which we will briefly introduce in the background section. Considering that social media can influence public and private opinions about these nominated movies, in this project, we investigated whether we can use twitter sentiment scores to predict the winners. Since the most talked-about Oscar categories on twitter are Best Picture, Best Actor, Best Actress, Best Supporting Actor and Best Supporting Actress, we will limit our prediction scope to these five main categories.</p>
+
+<hr />
 
 :ET
