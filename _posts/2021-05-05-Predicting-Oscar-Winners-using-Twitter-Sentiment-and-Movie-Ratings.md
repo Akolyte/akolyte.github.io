@@ -6,13 +6,13 @@ tag: project
 excerpt_separator: <!--more-->
 ---
 
-Date: May 5th, 2021
+**Date: May 5th, 2021**
 
-Class: SODA 308
+**Class: SODA 308**
 
-Instructor: Burt Monroe
+**Instructor: Burt Monroe**
 
-### Introduction
+## Introduction
 
 The Academy Awards, or the Oscars, is the most influential award show in the movie industry where best films of the year are awarded since 1929 (Zauzmer, 2020). Every year, cinephiles and general movie fans all over the world tune in to witness the awards being given out. Predicting the Oscars has also become very popular among movie fans. On the largest prediction site, Gold Derby, there are more than 10,000 users trying to predict the final winners every year.
 This year, due to the COVID-19 pandemic, the film industry is facing unprecedented challenges. 
@@ -28,7 +28,7 @@ To predict the winners, there are a variety of factors to take into consideratio
 
 <!--more-->
 
-### Background
+## Background
 
 There have been some attempts to apply quantitative methods for Oscar prediction in the past few years with varying degrees of success (Ables, 2019; Stutzenstein, 2021; Zauzmer, B., 2020). Zauzmer (2019) even published a book about using data science to predict oscar winners. 
 
@@ -43,7 +43,7 @@ Alternatively, other researchers have been using social media data to predict Os
 However, this year, the box office data has minimal impact as most theaters are still closed in the US. And given the influence that social media can play in swaying public and private opinion on movies, we believe that we can use Twitter post sentiment on related hashtags to movies and predict Oscar winners based on sentiment score amongst other features.  
 
 
-### Research Question
+## Research Question
 
 The research question is:
 
@@ -51,14 +51,14 @@ The research question is:
 
 As sentiment is not the only possible indicator of performance at the Oscars, movie ratings were also used as a predictor for the final model. Our hypothesis is that sentiment scores will be a significant feature in predicting Oscar results. 
 
-### Data
+## Data
 
 The data was collected from the Twitter API using Tweepy, a python package used to access the Twitter API. The search parameters that were used to search for the tweets were “#oscars” and “#person/movie name”. As Twitter posts related to the Oscars start to increase in frequency as time moves closer to the Oscars, we gathered 100 posts from each day of the week (April 16th - April 23rd) prior to the Oscars, for a total of 800 tweets per person/movie. All the posts were added to a pandas dataframe for easy accessibility. Each row contains the name of the person/actor, the text of the tweet, the favorite and retweet counts of the post, and the date the post was posted.
 
 Data was also collected from IMDB and Rotten tomatoes to obtain community and critic ratings for movies. This was done in order to calculate the total probability of a picture/person winning the Oscars. From IMDB the community rating was collected for the movie itself or the movie that the person performed in. From Rotten Tomatoes the critic score and audience score for the movie itself or the movie that the person performed in were collected.
 
 
-### Methods
+## Methods
 
 After the tweets were collected, they needed to be cleaned for sentiment analysis. The entire string of the text is set to lowercase, and any @ signs, links, numbers, and plus signs are replaced with a space. Stopwords including additional words related to retweets such as rt, rts, and retweet are removed from the text. Stopwords are words in the english language that are most commonly used such as you, it, be, etc. The words in the post were also stemmed using NLTK’s PorterStemmer. Stemming is taking words to their root form, so that different variations of a word are not counted as different words, and are instead counted as the same word. 
 
@@ -72,7 +72,7 @@ This entire methodology was performed on the five categories that we were predic
 
 ![pandas](/imgs/oscar_prediction/pandas.jpg)
 
-### Results
+## Results
 
 After all the pre-processing steps，and using all the methods we talked about above, we finally can get all the results we want. For each category, we get the results of sentiment score and the oscar winning probability.
 
@@ -95,7 +95,7 @@ ggplot(actor.data, aes(x=name, y=oscar_win)) +
 
 To get the bar plot from which we can visually determine which one is predicted to win.
 
-**For the sentiment score predictions:**
+### For the sentiment score predictions
 
 ![best actor sentiment](/imgs/oscar_prediction/best_actor_sentiment_ex.png)
 
@@ -107,11 +107,11 @@ To get the bar plot from which we can visually determine which one is predicted 
 
 ![best movie sentiment](/imgs/oscar_prediction/best_movie_sentiment.png)
 
-**Sentiment Score Predictions Results Summary:**
+### Sentiment Score Predictions Results Summary
 
 For the sentiment score winner predictions, we got the predictions right for best actor, best actress and best supporting actress, and got the predictions wrong for best supporting actor and the best movie, which is ⅗ for the total prediction accuracy.
 
-**For the Oscar Winner probability predictions:**
+### For the Oscar Winner probability predictions
 
 ![best actor](/imgs/oscar_prediction/best_actor.png)
 
@@ -123,13 +123,13 @@ For the sentiment score winner predictions, we got the predictions right for bes
 
 ![best movie](/imgs/oscar_prediction/best_movie.png)
 
-**Oscar Winner Probability Prediction Results Summary:**
+### Oscar Winner Probability Prediction Results Summary
 
 For the oscar winner probability predictions, we got predictions right for best actor and best actress, and got the predictions wrong for best supporting actor, best supporting actress and best movie, which is 2 out of 5 or 40% accuracy on our predictions. 
 
 Another thing to note with our results is that if our predictions were wrong for our probability model then the winner was always at least second place in our predictions, indicating that our model is at least performing well relative to expectations. Further analysis could help us understand how close we were from a probability perspective.
 
-### Discussion
+## Discussion
 
 From our results, it is undetermined as to whether sentiment is a good predictor for predicting Oscar results. The sentiment scores alone predicted three out of the five categories. Our final probability model only got two out of five categories correct, and this could be interpreted as meaning that the IDMB scores and Rotten Tomato scores were not good predictors.
 
@@ -139,7 +139,7 @@ An interesting observation was that our results were very close for our probabil
 
 Sentiment score was also in a unique position this year at the Oscars to be a great predictor for the results. Usually the Oscar committee members watch the movies together in a theater, and they were able to discuss their opinions on movies in person. However this year due to the pandemic they had to watch the movies at home, isolated from other people. They had to go to social media platforms such as twitter to know what other people think of the movies that they were evaluating. This could explain why average twitter post sentiment scores can be a decent feature to use for Oscars results predictions specifically for this year. 
 
-### Limitations
+## Limitations
 
 Our prediction of the Oscar winner is about half correct. There are several limitations that prevent us from predicting it more accurately. First, it is hard to collect more tweets due to the request cap and number of tweet cap per request. And we can only collect the tweets of the past month, but cannot go back further when we connect the tweets. 
 
@@ -149,17 +149,17 @@ The third one is our score weighting. The way we weighed the final grade is 25% 
 
 The last one is that we only predicted five categories of Oscar Award, if we could predict more instead of five, we could have a better understanding about how sentiment scores perform in the process of prediction, and then we could determine the weight of the sentiment rating in our prediction. 
 
-### Future Work
+## Future Work
 
 For the future work, there are several things that can make our predictions more clear and precise. As we mentioned in limitations, we can start earlier before the next prediction so that we could have more data from Twitter, which can be used as the sentiment score in our prediction. The other thing is that we can do some further research, like collect public and private opinions, for weights for the final probability metric. 
 
-### Conclusion
+## Conclusion
 
 In conclusion we were attempting to predict the Oscar results for Best Picture, Best Actor, Best Actress, Best Supporting Actor, and Best Supporting Actress. We hypothesized that using sentiment scores of twitter posts would be a significant feature in predicting the winners. While our results remained inconclusive as to whether sentiment scores of twitter posts are a significant feature, we can say at the very least that they were helpful and painted a picture of how the public felt about the Oscar candidates. 
 
 Our results themselves were very close to accurate, with the winner always being second place or above in our final predictions. In future work in order to determine whether sentiment was a determining feature we would predict many more categories to get a better idea of how accurate our model is, since five categories is too small. 
 
-### References
+## References
 
 *Ables, P.(2019) Predicting the “Best Picture” Oscar Award Winner. GRJ, 1. 
 Malyack, Colette Therese, Krystal M. Hunter, and Starr Roxanne Hiltz. "Twitter and the Prediction of Oscar Winners." (2020).*

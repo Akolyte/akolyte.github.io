@@ -1,8 +1,10 @@
-I"Ô<p>Date: December 31st, 2020
-Class: DS 320
-Instructor: Marc Rigas</p>
+I"ä<p>Date: December 31st, 2020</p>
 
-<h3 id="introduction">Introduction</h3>
+<p>Class: DS 320</p>
+
+<p>Instructor: Marc Rigas</p>
+
+<h2 id="introduction">Introduction</h2>
 
 <p>In this phase of the semester project our objective was to practice using data science techniques to extract and clean data, and then to integrate data using implementations of some of the techniques we learned in class. In part A of phase 2 we cleaned the data, identified missing values, and formally assessed the similarity of the data using instance-based matching. In part B we used FlexMatcher to match columns of different coronavirus datasets together.</p>
 

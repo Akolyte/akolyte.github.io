@@ -9,7 +9,7 @@ description: My portfolio of projects; both personal and school related
 	{% for tag in site.tags %}
 		{% if tag[0] == "project" %}
 			{% for post in tag[1] %}
-				<a href = "{{ post.url }}" target="_blank"><h2>{{ post.title }}</h2></a>
+				<a href = "{{ post.url }}" target="_blank"><h1>{{ post.title }}</h1></a>
 				<p>{{ post.excerpt }}</p>
 				<hr>
 			{% endfor %}

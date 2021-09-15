@@ -1,6 +1,10 @@
-I"4S<p>Date: December 31st, 2020</p>
+I"iS<p>Date: December 31st, 2020</p>
 
-<h3 id="introduction">Introduction</h3>
+<p>Class: DS 320</p>
+
+<p>Instructor: Marc Rigas</p>
+
+<h2 id="introduction">Introduction</h2>
 
 <p>In this phase of the semester project our objective was to practice using data science techniques to extract and clean data, and then to integrate data using implementations of some of the techniques we learned in class. In part A of phase 2 we cleaned the data, identified missing values, and formally assessed the similarity of the data using instance-based matching. In part B we used FlexMatcher to match columns of different coronavirus datasets together.</p>
 
@@ -8,7 +12,7 @@
 
 <!--more-->
 
-<h3 id="data-description">Data Description</h3>
+<h2 id="data-description">Data Description</h2>
 
 <p>Our group used a multitude of datasets. We did not use the same data that we used for part 1. For part A we used fast food location datasets, one from data.world which focused on subway restaurant locations, and another from Kaggle which used a variety of fast food restaurant’s locations such as McDonalds, Wendy’s, etc.</p>
 
@@ -105,7 +109,7 @@ duplicates.</p>
 
 <p><a href="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv">US Time Series Covid Cases</a></p>
 
-<h3 id="part-a-jaccard-similarity-measure">Part A: Jaccard Similarity Measure</h3>
+<h2 id="part-a-jaccard-similarity-measure">Part A: Jaccard Similarity Measure</h2>
 
 <p><strong>Methods:</strong></p>
 
