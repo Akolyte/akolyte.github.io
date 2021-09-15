@@ -4,12 +4,20 @@ title: Blog
 description: Career Progress
 ---
 
+<style>
+.center {
+	text-align: center;
+}
+</style>
+
 <body>
 	{% for tag in site.tags %}
 		{% if tag[0] == "weekly" %}
 			{% for post in tag[1] %}
-				<h2>{{ post.title }}</h2>
-				<p>{{ post.excerpt }}</p>
+				<div class="center">
+					<h1>{{ post.title }}</h1>
+					<p>{{ post.excerpt }}</p>
+				</div>
 			{% endfor %}
 		{% endif %}
 	{% endfor %}

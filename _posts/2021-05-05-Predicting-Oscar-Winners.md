@@ -25,6 +25,7 @@ Most importantly, because of the pandemic, all awards season screening had been 
 
 To predict the winners, there are a variety of factors to take into consideration, which we will briefly introduce in the background section. Considering that social media can influence public and private opinions about these nominated movies, in this project, we investigated whether we can use twitter sentiment scores to predict the winners. Since the most talked-about Oscar categories on twitter are Best Picture, Best Actor, Best Actress, Best Supporting Actor and Best Supporting Actress, we will limit our prediction scope to these five main categories.
 
+---
 
 <!--more-->
 

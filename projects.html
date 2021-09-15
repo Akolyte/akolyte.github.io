@@ -11,7 +11,6 @@ description: My portfolio of projects; both personal and school related
 			{% for post in tag[1] %}
 				<a href = "{{ post.url }}" target="_blank"><h1>{{ post.title }}</h1></a>
 				<p>{{ post.excerpt }}</p>
-				<hr>
 			{% endfor %}
 		{% endif %}
 	{% endfor %}

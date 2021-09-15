@@ -14,4 +14,6 @@ With this development, I had to gather all my things and move six and a half hou
 
 I've already been working at GM for two and a half months; I swear I just blinked and the time flew by! I'll continue to add the documentation from my projects in my last semester at Penn State, and after that I'll work on some personal projects that I've wanted to do but didn't have the time due to school. So be on the lookout for that. Till next time!
 
+---
+
 <!--more-->

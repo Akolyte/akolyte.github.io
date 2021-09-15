@@ -6,11 +6,11 @@ tag: project
 excerpt_separator: <!--more-->
 ---
 
-Date: December 31st, 2020
+### Date: December 31st, 2020
 
-Class: DS 320
+### Class: DS 320
 
-Instructor: Marc Rigas
+### Instructor: Marc Rigas
 
 ## Introduction
 
