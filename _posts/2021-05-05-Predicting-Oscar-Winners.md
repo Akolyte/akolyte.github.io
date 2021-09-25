@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 
 ### Class: SODA 308
 
-### Instructor: Burt Monroe
+### Instructor: Burt Monroe, Penn State University, College of Information Sciences and Technology
 
 ## Introduction
 
