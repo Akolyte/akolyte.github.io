@@ -10,7 +10,7 @@ excerpt_separator: <!--more-->
 
 ### Class: DS 320
 
-### Instructor: Marc Rigas
+### Instructor: Marc Rigas (Penn State University, College of Information Sciences and Technology)
 
 ## Introduction
 
