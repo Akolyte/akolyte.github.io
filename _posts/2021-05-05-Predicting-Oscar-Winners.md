@@ -6,6 +6,8 @@ tag: project
 excerpt_separator: <!--more-->
 ---
 
+![Oscars 2021](/imgs/oscar_prediction/oscars_2021.png)
+
 ### Date: May 5th, 2021
 
 ### Class: SODA 308

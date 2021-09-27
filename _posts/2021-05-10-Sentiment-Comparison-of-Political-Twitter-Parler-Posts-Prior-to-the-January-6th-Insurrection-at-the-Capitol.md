@@ -6,6 +6,8 @@ tag: project
 excerpt_separator: <!--more-->
 ---
 
+![comparison](/imgs/parler_twitter/twitter_vs_parler.png)
+
 ### Date: May 10th, 2021
 
 ### Class: DS 340W

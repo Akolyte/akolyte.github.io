@@ -1,0 +1,33 @@
+I"Ã<p><img src="/imgs/parler_twitter/twitter_vs_parler.png" alt="comparison" /></p>
+
+<h3 id="date-may-10th-2021">Date: May 10th, 2021</h3>
+
+<h3 id="class-ds-340w">Class: DS 340W</h3>
+
+<h3 id="instructor-kaamran-raahemifar-penn-state-university-college-of-information-sciences-and-technology">Instructor: Kaamran Raahemifar (Penn State University, College of Information Sciences and Technology)</h3>
+
+<h2 id="abstract">Abstract</h2>
+
+<p><em>Introduction</em></p>
+
+<p>The insurrection that took place on January 6th, 2021 was an event that will go down in history as a catastrophic failure by the U.S. government. Heads eventually turned towards Parler, a social media site similar to Twitter as a breeding ground for the extremists to plan their attack on the capitol.</p>
+
+<p><em>Objective</em></p>
+
+<p>We would like to quantitatively prove that Parler is a platform with more negative sentiment posts compared to Twitter.</p>
+
+<p><em>Methodology</em></p>
+
+<p>Posts were gathered from Twitter and Parler prior to January 6th. Seperate posts were gathered to train a binary classifier that separates political posts from non-political posts. The political posts were then processed to calculate their sentiment scores, and the averages were compared.</p>
+
+<p><em>Results</em></p>
+
+<p>The overall average sentiments for Twitter and Parler were neutral regardless of sentiment score language package used. (NLTK Vader vs TextBlob) Average sentiments for positive and neutral were different depending on said packages.</p>
+
+<p><em>Conclusion</em></p>
+
+<p>Results are inconclusive, with NLTK Vader and TextBlob resulting in wildly different results. In future work the classification testing and training sets should be much larger to better classify posts as political or non-political. More finely-tuned methods for sentiment analysis should be used to accurately determine whether negative and positive posts on average were different depending on platform (Twitter vs Parler).</p>
+
+<hr />
+
+:ET

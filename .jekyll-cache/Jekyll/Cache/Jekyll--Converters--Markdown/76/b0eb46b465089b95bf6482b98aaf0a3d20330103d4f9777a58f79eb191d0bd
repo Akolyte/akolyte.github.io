@@ -1,0 +1,65 @@
+I"<h3 id="date-may-11th-2021">Date: May 11th, 2021</h3>
+
+<h3 id="class-ds-440-capstone">Class: DS 440 (Capstone)</h3>
+
+<h3 id="instructor-prasenjit-mitra-penn-state-university-college-of-information-sciences-and-technology">Instructor: Prasenjit Mitra (Penn State University, College of Information Sciences and Technology)</h3>
+
+<h2 id="project-summary">Project Summary</h2>
+
+<h3 id="overview">Overview</h3>
+
+<p>Parks are dedicated public spaces that provide valuable benefits to public health and well-being. Park managers and tourism researchers have much to gain by understanding the patterns behind visitations to parks. Better decisions about which parks to allocate resources to can be made, so being able to track park visitation has major policy implications. Visitation data is available from companies like Safegraph; the challenge then is to make the raw visitation data accessible, visual, and otherwise useful for non-technical users.</p>
+
+<h3 id="objectives">Objectives</h3>
+
+<p>Our client’s requirements and thus our team objectives were two-fold, though more emphasis was placed on the first point:</p>
+<ol>
+  <li>Create a dashboard that allows the user to easily select a park and see its visitation data with visuals and charts.</li>
+  <li>Analyze and draw insights from visitation data.</li>
+</ol>
+
+<h3 id="approach">Approach</h3>
+
+<p>– Met weekly with our client Dr. Pan to get his feedback on our project and adjust direction if needed</p>
+
+<p>– Conducted exploratory data analysis with initial sample data to familiarize ourselves</p>
+
+<p>– Built a prototype dashboard to test visualizing park data using Python</p>
+
+<p>– Worked out tentative user + design specifications for an actual website with our client</p>
+
+<p>– Downloaded full visitation dataset from Safegraph</p>
+
+<p>– Began development of the dashboard frontend using ReactJS</p>
+
+<p>– Implemented the interactive map with multiple layers using Mapbox</p>
+
+<p>– Implemented interactive charts using the amCharts Javascript library</p>
+
+<p>– Tested PostgresQL as a backend, ultimately switched to MongoDB due to convenience</p>
+
+<p>– Wrote an API to retrieve visitation data from MongoDB using ExpressJS</p>
+
+<p>– Demoed our product to social scientists from the National Park Service and got their feedback</p>
+
+<p>– Created map functionality to visualize visitor-origins for a park</p>
+
+<p>– Deployed the dashboard application via Heroku</p>
+
+<p>– Developed an ANCOVA model to analyze the impact COVID19 has had on vistations to National Parks, alongside the determinants of racial demographic, distance, urban classification and median income of the visitors census origin.</p>
+
+<h3 id="outcomes">Outcomes</h3>
+
+<ol>
+  <li>Tourism researchers, park managers, and others interested in tracking park visitations now have a fully functional dashboard to do so (live now at park-visitation.herokuapp.com !)</li>
+  <li>COVID19 has significantly impacted visitations to national parks, with racial demographics and distance from visitor census origin showing significance towards park visitations amidst COVID19.</li>
+</ol>
+
+<p><a href="https://park-visitation.herokuapp.com/">Application Link</a></p>
+
+<p><a href="https://sites.psu.edu/lfshowcasesp21/2021/04/29/park-visitation-dashboard/">PSU Capstone Project Website</a></p>
+
+<hr />
+
+<!--more-->
+:ET
