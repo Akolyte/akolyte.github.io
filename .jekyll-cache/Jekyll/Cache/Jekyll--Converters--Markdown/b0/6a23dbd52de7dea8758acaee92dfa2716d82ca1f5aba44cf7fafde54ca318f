@@ -1,0 +1,24 @@
+I"<p>Hi all,</p>
+
+<p>I’m proud to announce today that I have finished the basic career components of the website! I have added this list of materials into the website.</p>
+<ol>
+  <li>
+    <p>All of my major data science projects that I completed in my last semester at Penn State</p>
+
+    <p>Park Visitation Dashboard</p>
+
+    <p>Machine Learning Research Paper - Comparing Parler and Twitter sentiment prior to January 6th</p>
+
+    <p>Predicting the 2021 Oscars results</p>
+  </li>
+  <li>Added a statement of purpose to the home page, to let people know what exactly I’m pursuing in my career and why I’m pursuing it</li>
+  <li>Backend support for text to be implemented through posts rather than hardcoded HTML on the html side</li>
+  <li>The ability to locally test my website, so I no longer have to commit to github to view my changes</li>
+  <li>The navigation bar is now buttons instead of a bar, which looks much better than the previous version, and looks native to the cayman theme</li>
+</ol>
+
+<p>I’m also happy to announce that I’m currently applying to online masters programs! I already got accepted to John Hopkins Data Science program, so I’m super excited about getting accepted to more schools and figuring out what the next couple of year will look like!</p>
+
+<hr />
+
+:ET
