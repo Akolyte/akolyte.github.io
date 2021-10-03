@@ -16,25 +16,7 @@ excerpt_separator: <!--more-->
 
 ## Abstract
 
-*Introduction*
-
-The insurrection that took place on January 6th, 2021 was an event that will go down in history as a catastrophic failure by the U.S. government. Heads eventually turned towards Parler, a social media site similar to Twitter as a breeding ground for the extremists to plan their attack on the capitol. 
-
-*Objective*
-
-We would like to quantitatively prove that Parler is a platform with more negative sentiment posts compared to Twitter.
-
-*Methodology*
-
-Posts were gathered from Twitter and Parler prior to January 6th. Seperate posts were gathered to train a binary classifier that separates political posts from non-political posts. The political posts were then processed to calculate their sentiment scores, and the averages were compared. 
-
-*Results*
-
-The overall average sentiments for Twitter and Parler were neutral regardless of sentiment score language package used. (NLTK Vader vs TextBlob) Average sentiments for positive and neutral were different depending on said packages.
-
-*Conclusion*
-
-Results are inconclusive, with NLTK Vader and TextBlob resulting in wildly different results. In future work the classification testing and training sets should be much larger to better classify posts as political or non-political. More finely-tuned methods for sentiment analysis should be used to accurately determine whether negative and positive posts on average were different depending on platform (Twitter vs Parler).
+The insurrection that took place on January 6th, 2021 is an event that will go down in history as a catastrophic failure by the U.S. government. Heads eventually turned towards Parler, a social media site similar to Twitter as a breeding ground for the extremists to plan their attack on the capitol. Our team compared sentiment scores for Parler and Twitter posts. Posts were gathered from Twitter and Parler prior to January 6th. Separate posts were gathered to train a binary classifier that labels posts as political or non-political. The political posts were then processed to calculate their sentiment scores, and the averages were compared. The average negative sentiment scores for Twitter was higher than Parler for TextBlob, but was lower than Parler for NLTKVader. Average sentiment scores for positive and neutral were relatively similar between TextBlob and NLTKVader. Results are inconclusive, with NLTK Vader and TextBlob resulting in different results for average negative sentiment. In future work the classification testing and training sets should be much larger to better classify posts as political or non-political. More finely-tuned methods for sentiment analysis should be used to accurately determine whether negative and positive posts on average were different depending on sentiment analyzer.
 
 ---
 
