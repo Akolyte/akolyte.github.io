@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Data Science Capstone Park Visitation Covid Dashboard
+title: Data Science Capstone - Park Visitation Covid Dashboard
 description: By Thomas Zhao, Charles Alba, Hojin Ryoo, Evan Menendez, Jinhan Li, Xutao Li, Xueshi Bai, Benjamin Crooks, Jin Hee Lee
 tag: project
 excerpt_separator: <!--more-->

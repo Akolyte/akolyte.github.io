@@ -4,25 +4,19 @@ title: Hojin Ryoo
 description: Software Developer at General Motors
 ---
 
+{% include title-image-alignment.html %}
+
 <style>
-.center {
-	text-align: center;
-}
-.center_image {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
-}
+h3 {text-align: center}
 </style>
 
 <body>
-<img src="/imgs/profile.jpg" alt="Profile Picture" style="width:80%;height:80%" class="center_image">
+<img src="/imgs/profile.jpg" alt="Profile Picture">
 
 {% for tag in site.tags %}
 	{% if tag[0] == "homepage" %}
 		{% for post in tag[1] %}
-			<div class="center">
+			<div>
 				<p>{{ post.excerpt }}</p>
 			</div>
 		{% endfor %}

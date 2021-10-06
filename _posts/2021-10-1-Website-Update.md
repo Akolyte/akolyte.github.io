@@ -4,19 +4,17 @@ tag: weekly
 excerpt_separator: <!--more-->
 ---
 
-<img src="/imgs/boba.jpg" alt="dboba" height="20%" width="20%"/>
-
 Hi all,
 
 As of writing this I'm currently chilling at a boba place while working on the website. I'm proud to announce that today I have finished the basic career components of the website! I have added this list of materials into the website:
 
 1. All of my major data science projects that I completed in my last semester at Penn State
 
-**Park Visitation Dashboard**
+	- **Park Visitation Dashboard**
 	
-**Machine Learning Research Paper - Comparing Parler/Twitter sentiment prior to January 6th**
+	- **Machine Learning Research Paper - Comparing Parler/Twitter sentiment prior to January 6th**
 	
-**Predicting the 2021 Oscars results through movie scores and sentiment scores**
+	- **Predicting the 2021 Oscars results through movie scores and sentiment scores**
 
 2. Added a statement of purpose to the home page, to let people know what exactly I'm pursuing in my career and why I'm pursuing it
 
