@@ -10,7 +10,6 @@ description: My background and who I am
 	{% for tag in site.tags %}
 		{% if tag[0] == "about" %}
 			{% for post in tag[1] %}
-				<h1>{{ post.title }}</h1>
 				<p>{{ post.excerpt }}</p>
 			{% endfor %}
 		{% endif %}

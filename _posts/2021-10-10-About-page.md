@@ -4,6 +4,8 @@ tag: about
 excerpt_separator: <!--more-->
 ---
 
+# Early Life
+
 ![collage](/imgs/collage.jpg)
 
 Growing up I always had a fascination with technology, and I had many opportunities to engage with that interest through my participation in the Technology Student Assocation (TSA). I also participated in many other extracurriculurs, including piano, taekwondo, boy scouts, cross country, and choir.

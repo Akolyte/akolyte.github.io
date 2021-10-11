@@ -7,19 +7,17 @@ description: Software Developer at General Motors
 {% include title-image-alignment.html %}
 
 <style>
-h3 {text-align: center}
+	h3 {text-align: center}
 </style>
 
 <body>
-<img src="/imgs/profile.jpg" alt="Profile Picture">
-
-{% for tag in site.tags %}
-	{% if tag[0] == "homepage" %}
-		{% for post in tag[1] %}
-			<div>
-				<p>{{ post.excerpt }}</p>
-			</div>
-		{% endfor %}
-	{% endif %}
-{% endfor %}
+	{% for tag in site.tags %}
+		{% if tag[0] == "homepage" %}
+			{% for post in tag[1] %}
+				<div>
+					<p>{{ post.excerpt }}</p>
+				</div>
+			{% endfor %}
+		{% endif %}
+	{% endfor %}
 </body>
