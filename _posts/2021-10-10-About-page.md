@@ -12,17 +12,25 @@ Growing up I always had a fascination with technology, and I had many opportunit
 
 These interests eventually lead to my love for programming, and my career in Data Science. After learning more about the domain, I loved the problem solving part of the job (such as fine tuning machine learning techniques, predictive modeling, visualizations, etc.), and I decided that was the career I wanted to pursue.
 
+---
+
 # Visionese - IT Intern
 
 ![visionese](/imgs/visionese.png)
 
 In June 2018 I interned over the summer for a startup called Visionese based in State College, PA as an IT intern. They had previously dealt with creating virtual reality tours of different spaces, but they were transitioning to office spaces as a service in different cities. My role was to get their website up and running, and update it on a regular basis through feedback from my manager.
 
+---
+
 # M&T Bank - Technology Intern
 
 ![m&t](/imgs/mtbank2.jpg)
 
-The next summer in June 2019 I interned at M&T bank as a technology intern. I was placed in a database administration department, and I spent my day to day writing PowerShell scripts to automate database administration tasks. I also worked together with another group in the company to create a training module for Neo4j, as group wanted to start using in their work, but wanted to teach it in a banking context. In order to become more familiar with scrum methodologies I also worked with another team in their scrum meetings, and together we presented a piece of software to senior leadership at the end of the internship. There we placed 3rd out of 22 groups participating at the time.
+The next summer in June 2019 I interned at M&T bank as a technology intern. I was placed in a database administration department, and I spent my day to day writing PowerShell scripts to automate database administration tasks. I also worked together with another group in the company to create a training module for Neo4j, as group wanted to start using in their work, but wanted to teach it in a banking context. 
+
+In order to become more familiar with scrum methodologies I also worked with another team in their scrum meetings, and together we presented a piece of software to senior leadership at the end of the internship. There we placed 3rd out of 22 groups participating at the time.
+
+---
 
 # Penn State University - B.S. in Data Sciences
 
@@ -31,6 +39,8 @@ The next summer in June 2019 I interned at M&T bank as a technology intern. I wa
 In May 2021 I graduated from Penn State University with a Bachelor of Science in Data Science from Penn State's College of Information Sciences and Technology. Along the way I met and got to know many great peers and professors who helped me explore my interests in statistics and data science.
 
 My degree was an "Applied" option of the data science program, meaning that there was a greater focus on building models and applications throughout my coursework. Therefore I have a lot of hands on experience with building data science applications, models, and data cleaning with real-life datasets.
+
+---
 
 # Post Graduation - General Motors
 
