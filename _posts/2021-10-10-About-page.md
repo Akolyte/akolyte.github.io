@@ -48,6 +48,8 @@ My degree was an "Applied" option of the data science program, meaning that ther
 
 Currently I am working at General Motors as a Software Developer in Warren, Michigan. In my spare time I'm trying my best to go out and get to know lots of new people and work on myself professionally, whether that be through developing this website, or creating applications relevant to my interests in statistical analysis and data science.
 
+---
+
 # Pursuing my Master's Degree - UIUC
 
 ![uiuc](/imgs/grainger.jpg)
