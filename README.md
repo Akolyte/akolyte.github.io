@@ -2,4 +2,4 @@
 
 - Sitewide settings are located in the _config.yml file
 Current tasks
-- [] Add previous projects to project tab.
+- [x] Add previous projects to project tab.
