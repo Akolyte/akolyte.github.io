@@ -23,7 +23,9 @@ Parks are dedicated public spaces that provide valuable benefits to public healt
 ### Objectives
 
 Our client’s requirements and thus our team objectives were two-fold, though more emphasis was placed on the first point:
+
 1. Create a dashboard that allows the user to easily select a park and see its visitation data with visuals and charts.
+
 2. Analyze and draw insights from visitation data.
 
 ### Approach
