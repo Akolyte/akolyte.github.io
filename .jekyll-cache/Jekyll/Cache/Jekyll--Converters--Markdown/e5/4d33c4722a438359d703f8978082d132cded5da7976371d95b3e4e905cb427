@@ -1,4 +1,4 @@
-I"°T<p><img src="/imgs/schema_matcher/data.jpg" alt="data" /></p>
+I"ùU<p><img src="/imgs/schema_matcher/data.jpg" alt="data" /></p>
 
 <h3 id="date-december-31st-2020">Date: December 31st, 2020</h3>
 
@@ -130,17 +130,17 @@ duplicates.</p>
   <span class="n">grams</span> <span class="o">=</span> <span class="p">[]</span>
   <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">array</span><span class="p">:</span>
       <span class="c1"># pads the text to show beginning and end of string
-</span>      <span class="n">text_padded</span> <span class="o">=</span> <span class="s">"$"</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> <span class="s">"$"</span>
+</span>      <span class="n">text_padded</span> <span class="o">=</span> <span class="sh">"</span><span class="s">$</span><span class="sh">"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="o">+</span> <span class="sh">"</span><span class="s">$</span><span class="sh">"</span>
       <span class="c1">#text_padded = "$$" + str(text) + "$$"
 </span>      <span class="c1"># traverses through the string and takes n-grams
-</span>      <span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">text_padded</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+</span>      <span class="n">length</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">text_padded</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
       <span class="c1">#length = len(text_padded) - 2
-</span>      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
+</span>      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">length</span><span class="p">):</span>
           <span class="n">first</span> <span class="o">=</span> <span class="n">text_padded</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
           <span class="n">second</span> <span class="o">=</span> <span class="n">text_padded</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span>
           <span class="c1">#third = text_padded[i+2]
 </span>          <span class="n">gram</span> <span class="o">=</span> <span class="n">first</span> <span class="o">+</span> <span class="n">second</span> <span class="c1">#+ third
-</span>          <span class="n">grams</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">gram</span><span class="p">)</span>
+</span>          <span class="n">grams</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">gram</span><span class="p">)</span>
       <span class="c1"># appends gram to list of grams
 </span>  <span class="k">return</span> <span class="n">grams</span>
 </code></pre></div></div>
@@ -149,24 +149,24 @@ duplicates.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Jaccard Similarity Measure - 2gram
 # Take the set of all the tokens 
-</span><span class="n">col_vals</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">getGrams</span><span class="p">(</span><span class="n">kaggle_clean</span><span class="p">[</span><span class="s">'address'</span><span class="p">].</span><span class="n">unique</span><span class="p">()))</span>
+</span><span class="n">col_vals</span> <span class="o">=</span> <span class="nf">set</span><span class="p">(</span><span class="nf">getGrams</span><span class="p">(</span><span class="n">kaggle_clean</span><span class="p">[</span><span class="sh">'</span><span class="s">address</span><span class="sh">'</span><span class="p">].</span><span class="nf">unique</span><span class="p">()))</span>
 <span class="n">jaccard_list</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">names</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="c1"># Get the jaccard similarity score for each attribute of dataworld compared to address from kaggle and save it
 </span><span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">dataworld_clean</span><span class="p">.</span><span class="n">columns</span><span class="p">:</span>
-    <span class="n">ext_col_vals</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">getGrams</span><span class="p">(</span><span class="n">dataworld_clean</span><span class="p">[</span><span class="n">col</span><span class="p">].</span><span class="n">unique</span><span class="p">()))</span>
-    <span class="n">intersection_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">col_vals</span><span class="p">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">ext_col_vals</span><span class="p">))</span>
-    <span class="n">union_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">col_vals</span><span class="p">.</span><span class="n">union</span><span class="p">(</span><span class="n">ext_col_vals</span><span class="p">))</span>
+    <span class="n">ext_col_vals</span> <span class="o">=</span> <span class="nf">set</span><span class="p">(</span><span class="nf">getGrams</span><span class="p">(</span><span class="n">dataworld_clean</span><span class="p">[</span><span class="n">col</span><span class="p">].</span><span class="nf">unique</span><span class="p">()))</span>
+    <span class="n">intersection_size</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">col_vals</span><span class="p">.</span><span class="nf">intersection</span><span class="p">(</span><span class="n">ext_col_vals</span><span class="p">))</span>
+    <span class="n">union_size</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">col_vals</span><span class="p">.</span><span class="nf">union</span><span class="p">(</span><span class="n">ext_col_vals</span><span class="p">))</span>
     <span class="n">jaccard</span> <span class="o">=</span> <span class="n">intersection_size</span> <span class="o">/</span> <span class="n">union_size</span>
-    <span class="n">jaccard_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">jaccard</span><span class="p">)</span>
+    <span class="n">jaccard_list</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">jaccard</span><span class="p">)</span>
     <span class="n">names</span><span class="p">[</span><span class="n">jaccard</span><span class="p">]</span> <span class="o">=</span> <span class="n">col</span>
 <span class="c1"># Take the maximum similarity score from the jaccard similarity score list
-</span><span class="n">maxed</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">jaccard_list</span><span class="p">)</span>
+</span><span class="n">maxed</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">jaccard_list</span><span class="p">)</span>
 <span class="c1"># if the maxed is not zero print the similarity score, otherwise all of the similarity scores are 0
 </span><span class="k">if</span> <span class="n">maxed</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">maxed</span><span class="p">]</span> <span class="o">+</span> <span class="s">' has similarity score '</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">maxed</span><span class="p">))</span>
+    <span class="nf">print</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">maxed</span><span class="p">]</span> <span class="o">+</span> <span class="sh">'</span><span class="s"> has similarity score </span><span class="sh">'</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">maxed</span><span class="p">))</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="s">"All similarity scores are 0"</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">All similarity scores are 0</span><span class="sh">"</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h3 id="results">Results</h3>
@@ -207,7 +207,7 @@ duplicates.</p>
 
 <p>After this we ran the schema matcher model on the time series dataset and returned these results.</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">predicted_mapping</span> <span class="o">=</span> <span class="n">fm</span><span class="p">.</span><span class="n">make_prediction</span><span class="p">(</span><span class="n">covid_cases</span><span class="p">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">predicted_mapping</span> <span class="o">=</span> <span class="n">fm</span><span class="p">.</span><span class="nf">make_prediction</span><span class="p">(</span><span class="n">covid_cases</span><span class="p">.</span><span class="nf">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
 <span class="n">predicted_mapping</span>
 </code></pre></div></div>
 

@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 5/21/2022 - End of Semester Update
 tag: weekly
 excerpt_separator: <!--more-->

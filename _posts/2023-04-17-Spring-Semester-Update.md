@@ -1,5 +1,4 @@
 ---
-layout: post
 title: 4/17/2023 - Spring Semester Update
 tag: weekly
 excerpt_separator: <!--more-->
