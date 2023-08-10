@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 
 ![Covid_19_Dashboard](/imgs/dashboard.png)
 
-### Date: March 25th, 2023
+### Date: July 8th, 2023
 
 ### Class: CS416 Deep Learning for Healthcare @ UIUC
 

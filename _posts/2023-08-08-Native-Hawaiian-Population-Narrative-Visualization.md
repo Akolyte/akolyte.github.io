@@ -8,7 +8,7 @@ excerpt_separator: <!--more-->
 
 ![Narrative_Visualization](/imgs/narrative_visualization.png)
 
-### Date: May 7th, 2023
+### Date: August 8th, 2023
 
 ### Class: CS416 Deep Learning for Healthcare @ UIUC
 
