@@ -26,7 +26,7 @@ In June 2018 I interned over the summer for a startup called Visionese based in 
 
 ![m&t](/imgs/mtbank2.jpg)
 
-The next summer in June 2019 I interned at M&T bank as a technology intern. I was placed in a database administration department, and I spent my day to day writing PowerShell scripts to automate database administration tasks. I also worked together with another group in the company to create a training module for Neo4j, as group wanted to start using in their work, but wanted to teach it in a banking context. 
+The next summer in June 2019 I interned at M&T bank as a technology intern. I was placed in a database administration department, and I spent my day to day writing PowerShell scripts to automate database administration tasks. I also worked together with another group in the company to create a training module for Neo4j, as group wanted to start using in their work, but wanted to teach it in a banking context.
 
 In order to become more familiar with scrum methodologies I also worked with another team in their scrum meetings, and together we presented a piece of software to senior leadership at the end of the internship. There we placed 3rd out of 22 groups participating at the time.
 
